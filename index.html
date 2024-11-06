@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <h1 class="game-title">Rock, Paper, Scissor</h1>
+
+    <section class="start-window">
+
+        <h2>Welcome - How to play:</h2>
+        <p>Select rock, paper or scissor against the artificial opponent. First player to reach 3 points wins.</p>
+        <button id="start-btn">Start!</button>
+
+    </section>
+
+    <div class="game-window">
+
+        <div class="players">
+            <section id="computer">
+                <h3>Computer</h3>
+                <p>Points: <span id="computer-points"></span></p>
+                <p id="computer-output"></p>
+            </section>
+    
+            <section id="player">
+                <h3>Player</h3>
+                <p>Points: <span id="player-points"></span></p>
+                <p id="player-output"></p>
+            </section>
+        </div>
+
+        <fieldset>
+            <input id="user-input" type="text" placeholder="Rock, paper or scissor?" pattern="[^a-zA-Z]+" required>
+            <button id="submit-btn">Submit</button>
+        </fieldset>
+
+        <p id="game-msg"></p>
+
+    </div>
+
+</body>
+</html>

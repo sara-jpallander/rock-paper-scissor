@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.start-window {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.game-window {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
