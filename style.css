@@ -12,6 +12,47 @@ body {
     width: 50%;
 }
 
+.current-player {
+    margin: 0 0 1rem 0;
+}
+
+.name-input-field {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-self: center;
+    gap: 0.5rem;
+}
+
+#start-btn {
+    all: unset;
+    width: 40%;
+    align-self: center;
+    cursor: pointer;
+
+    color: #fafafa;
+    background-color: #252723;
+    padding: 1rem 0;
+    border: 2px solid #252723 ;
+    border-radius: 10px;
+
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: 0.4s;
+}
+
+#start-btn:hover {
+    background-color: #fafafa;
+    color: #252723;
+}
+
+#name-input {
+    padding: 0.5rem;
+}
+
 .game-window {
     display: none;
     flex-direction: column;

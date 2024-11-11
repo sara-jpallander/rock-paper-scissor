@@ -25,6 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let gameActive = false;
 
+    // Variabler för namn input som sedan ska sparas i local storage och visas på sidan
+    const nameInput = document.getElementById('name-input');
+    const nameDisplay = document.getElementById('name-display');
+    
+    // För att local storage värdet faktiskt ska synas även om man laddar om sidan:
+    nameDisplay.innerText = localStorage.getItem("name");
+
+
     // Funktion för att starta spelet. Start window försvinner och game window visas.
     function gameInit() {
         
@@ -43,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Alla värden i game window resettas varje gång man börjar spelet.
         userPoints = 0;
         computerPoints = 0;
+       // nameInput = "";
 
         displayComputerPoints.innerHTML = computerPoints;
         displayUserPoints.innerHTML = userPoints;
@@ -50,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         computerOutput.innerHTML = '';
         userOutput.innerHTML = '';
 
+        saveName();
         gameInit();
 
     });
@@ -80,6 +90,25 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
     });
+
+    function saveName() {
+        
+        let handledInput = "";
+
+        if((nameInput.value === "") || (nameInput.value === null)) {
+
+            alert("You have not entered a name.");
+
+        } else {
+
+            handledInput = nameInput.value;
+            handledInput = handledInput.trim();
+
+        };
+
+        localStorage.setItem('name', handledInput);
+        nameDisplay.innerText = localStorage.getItem("name");
+    };
 
     // Datorn väljer sten, sax, påse.
     function computerChoice() {

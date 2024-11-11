@@ -10,11 +10,18 @@
 <body>
     
     <h1 class="game-title">Rock, Paper, Scissor</h1>
+    <p class="current-player">Current player: <span id="name-display"></span></p>
 
     <section class="start-window">
 
         <h2>Welcome - How to play:</h2>
-        <p>Select rock, paper or scissor against the artificial opponent. First player to reach 3 points wins.</p>
+        <p>Type rock, paper or scissor against the artificial opponent. First player to reach 3 points wins.</p>
+
+        <fieldset class="name-input-field">
+            <label for="name-input">Enter your name:</label>
+            <input type="text" id="name-input">
+        </fieldset>
+
         <button id="start-btn">Start!</button>
 
     </section>
